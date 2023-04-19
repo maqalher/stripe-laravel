@@ -1,0 +1,22 @@
+editar modelo Subscriotion para obtener el nombre del plan
+    **C:\Users\Wolf\example-app\vendor\laravel\cashier\src\Subscription.php
+
+    use App\Models\Plan;
+
+    public function plan()
+    {
+        return $this->belongsTo(Plan::class, 'plan_id', 'stripe_price');
+    }
+
+    **protected $with = ['items', 'plan'];
+
+
+Agregar columnas a Laravel Cashier Subscription Table 
+
+    php artisan vendor:publish
+
+    *** Tag: cashier-migrations ........................................................................................................... 11
+
+    *11*
+
+    php artisan migrate:fresh
